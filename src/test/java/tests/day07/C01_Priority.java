@@ -22,10 +22,10 @@ public class C01_Priority {
 
 
 
-    ////Priorty belirtmez isek priority value default olarak '0' olur.
-    ////1-Priority value'su negatif olanlar value'larina gore siralanarak ilk olarak calisir.
-    ////2-Priority belirtmediklerimiz oncesinde kendi aralarinda alfabetik olarak calisir,
-    ////3-Priority'leri pozitif olanlar value'larina gore siralanarak calisir.
+    //// Priorty belirtmez isek priority value default olarak '0' olur.
+    //// 1-Priority value'su negatif olanlar value'larina gore siralanarak ilk olarak calisir.
+    //// 2-Priority belirtmediklerimiz oncesinde kendi aralarinda alfabetik olarak calisir,
+    //// 3-Priority'leri pozitif olanlar value'larina gore siralanarak calisir.
     //// default priority=0
 
     WebDriver driver;
@@ -33,7 +33,7 @@ public class C01_Priority {
     @BeforeMethod
     public void setup(){
         WebDriverManager.chromedriver().setup();
-         driver=new ChromeDriver();
+        driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }

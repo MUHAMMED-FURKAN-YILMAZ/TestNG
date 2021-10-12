@@ -37,8 +37,8 @@ public class C03_DependsOn {
     }
 
     // testleri birbirine bagladigimizda
-    //1- 2. methodu tek basina calistirmak istesek bile otomatik olarak once 1. method calisir
-    //2- 1. method failed olursa 2. method ignore edilir, calistirilmaz
+    // 1- 2. methodu tek basina calistirmak istesek bile otomatik olarak once 1. method calisir
+    // 2- 1. method failed olursa 2. method ignore edilir, calistirilmaz
     @Test(dependsOnMethods = "test1")
     public void test2(){
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Nutella"+ Keys.ENTER);
@@ -47,7 +47,7 @@ public class C03_DependsOn {
 
 
     // eger 3 test ve daha fazlasi birbirine dependsOn ile baglandiysa
-    // 3.'yu calistirmak istedigimizde chain reaksiyon calisip 1.'ye GITMEZZZ
+    //****** 3.'yu calistirmak istedigimizde chain reaksiyon calisip 1.'ye GITMEZZZ *******
     @Test(dependsOnMethods = "test2")
     public void test3(){
         driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[1]")).click();
