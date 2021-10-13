@@ -74,7 +74,9 @@ public class C03_SoftAssertTest {
 
         List<String> allOptionsString=new ArrayList<>();
 
-        for (WebElement w:allOptions){
+      //  allOptions.stream().forEach(t->allOptionsString.add(t.getText()));-->lambda ile
+
+        for (WebElement w:allOptions){// for each ile
             allOptionsString.add(w.getText());
         }
 

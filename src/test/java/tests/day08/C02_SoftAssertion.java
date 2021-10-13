@@ -16,8 +16,8 @@ import java.util.concurrent.TimeUnit;
 
 public class C02_SoftAssertion {
 
-    // Verify edin dendiginde soft assert'tur..-> convention'i budur
-    // test edin dendiginde ise hard assert'tur
+// Verify edin dendiginde soft assert'tur..-> convention'i budur
+// test edin dendiginde ise hard assert'tur
 
 // burada 2 hata vermesine ragmen teste devam ediyor. hard assert gibi kodu break etmiyor
 
@@ -65,7 +65,8 @@ public class C02_SoftAssertion {
         System.out.println("assertion failed oldugunda bu satir assertAll()'dan sonra oldugu icin artik calismaz");
 
     }
-//assertAll()'dan sonra o methodu calistirmamasina ragmen @afterclass'i calistirdi
+//assertAll()'dan sonra o methodu calistirmamasina ragmen @afterclass'i calistirdi,
+// cunku aslinda burasi ayri bir method--> scope meselesi
     @AfterClass
     public void tearDown(){
         driver.close();
