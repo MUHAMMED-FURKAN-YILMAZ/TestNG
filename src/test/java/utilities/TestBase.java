@@ -23,6 +23,7 @@ public abstract class TestBase {
 
 // Biz test base class'i sadece extends ile inherit ederek kullanacagiz
 // dolayisi ile olusturdugumuz driver variable'i icin protected access modifier'i seciyoruz
+
     protected WebDriver driver;
 
     @BeforeClass
@@ -35,6 +36,6 @@ public abstract class TestBase {
 
     @AfterClass
     public void tearDown(){
-        driver.close();
+        //driver.quit();
     }
 }
