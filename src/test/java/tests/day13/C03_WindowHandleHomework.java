@@ -31,7 +31,7 @@ public class C03_WindowHandleHomework extends TestBase {
 
         Set<String> allWindowHandles=driver.getWindowHandles();
         for (String w:allWindowHandles) {
-            if (firstWindowHandle!=w){
+            if (!firstWindowHandle.equals(w)){
                 secondWindpwHandle=w;
             }
         }
