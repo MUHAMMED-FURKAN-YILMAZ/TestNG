@@ -32,6 +32,7 @@ public void test() throws InterruptedException {
     actions.moveToElement(ikinciUrun).perform();
     driver.findElement(By.xpath("(//span[text()='Add to cart'])[4]")).click();
     driver.findElement(By.xpath("//span[@title='Continue shopping']")).click();
+
     //// 4) 5. URUNUN UZERiNE GELiP Add to chart YAPIN
     WebElement ucuncuUrun=driver.findElement(By.xpath("(//img[@title='Printed Summer Dress'])[1]"));
 
@@ -41,12 +42,27 @@ public void test() throws InterruptedException {
 
     driver.findElement(By.xpath("(//span[text()='Add to cart'])[5]")).click();
     driver.findElement(By.xpath("//span[@title='Continue shopping']")).click();
+
     //// 5) CHART a gelin 3 ürün olduğunu doğrulayın
     WebElement yazi = driver.findElement(By.xpath("//span[@class='ajax_cart_product_txt_s  unvisible']"));
     Assert.assertTrue(yazi.isDisplayed());
 
     //// 6) CHART'A GELiP Chek out TIKLAYIN
+    WebElement chart = driver.findElement(By.xpath("//a[@title='View my shopping cart']"));
+    actions.moveToElement(chart).perform();
+
+    driver.findElement(By.xpath("//a[@title='Check out']")).click();
+
+
     //// 7) toplam alışveriş miktarının 108.97 olduğunu doğrula
+    WebElement totalPrice = driver.findElement(By.xpath("//span[@id='total_price']"));
+    String actualPrice = totalPrice.getText();
+    String expectedPrice = "$108.97";
+
+    System.out.println("ALISVERiS TOPLAMI : " + totalPrice.getText());
+
+    Assert.assertEquals(actualPrice, expectedPrice, "PRiCE HATALI");
+    
 }
 
 
