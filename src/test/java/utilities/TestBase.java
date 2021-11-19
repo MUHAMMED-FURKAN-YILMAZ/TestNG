@@ -35,7 +35,7 @@ public abstract class TestBase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-/*--> 2.windpwHandle icin method call ile cagirmak icin
+//--> 2.windpwHandle icin method call ile cagirmak icin
 
     static public String getSecondHandle() {
         String firstHandle = driver.getWindowHandle();
@@ -49,7 +49,7 @@ public abstract class TestBase {
         }
         return secondHandle;
     }
-*/
+
 
 
     @AfterClass
