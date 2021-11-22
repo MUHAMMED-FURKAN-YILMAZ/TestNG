@@ -27,7 +27,7 @@ public class C04_FileDownload extends TestBase {
     public void isExist(){
         //4. Ardından isExist()  methodunda dosyanın başarıyla indirilip indirilmediğini test edelim
 
-        // "C:\Users\Muhammed Furkan Yılm\Downloads\logo.png"
+        // "C:\Users\user\Downloads\logo.png"
         String dosyaYolu=System.getProperty("user.home")+"\\Downloads\\logo.png";
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 

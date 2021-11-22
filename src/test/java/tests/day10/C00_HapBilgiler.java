@@ -63,7 +63,8 @@ driver.switchTo().defaultContent();   En ustteki frame'e cikmak icin kullanilir
     ○  reports (Raporlar)
     ○  tearDown method
 
-●  TestBase class'i abstract yapabiliriz (Olmasa da olabilir) , extends yaparak kullanabiliriz. Ve bu class'da object create edemeyiz.
+●  TestBase class'i abstract yapabiliriz (Olmasa da olabilir) , extends yaparak kullanabiliriz.
+        Ve bu class'da object create edemeyiz.
 ●   olusturdugumuz driver in farklı package lerden kullanabilmek için PROTECTED yapariz
 
                             Tabs- Sekmeler

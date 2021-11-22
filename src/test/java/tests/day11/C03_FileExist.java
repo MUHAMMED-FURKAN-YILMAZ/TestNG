@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 public class C03_FileExist  {
     @Test
     public void test(){
-        System.out.println(System.getProperty("user.home")); //C:\Users\Muhammed Furkan Yılm
-        // "C:\Users\Muhammed Furkan Yılm\Desktop\picture.jpg"
+        System.out.println(System.getProperty("user.home")); //C:\Users\user
+        // "C:\Users\user\Desktop\picture.jpg"
 
         // Masaustundeki bir dosya yolunun tum bilgisayarlarda sorunsuz calismasi icin
         //      dosya yolunu ikiye ayiracagiz
@@ -20,7 +20,7 @@ public class C03_FileExist  {
         // ornek masaustumuzdeki picture dosyasi icin yol kaydedelim
         String dosyaYoluDinamik = System.getProperty("user.home")+ "\\Desktop\\picture.jpg";
 
-        String dosyaYoluManuel="C:\\Users\\Muhammed Furkan Yılm\\Desktop\\picture.jpg";
+        String dosyaYoluManuel="C:\\Users\\user\\Desktop\\picture.jpg";
 
         System.out.println("dosya yolumuz : "+dosyaYoluDinamik);
 
