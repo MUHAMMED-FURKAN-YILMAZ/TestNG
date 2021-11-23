@@ -11,9 +11,10 @@ public class Test9_Homework2 extends TestBase {
     public void setUp() throws InterruptedException {
         driver.get("https://books-pwakit.appspot.com/");
 
-        JavascriptExecutor jsExecutrer = (JavascriptExecutor) driver;
+        JavascriptExecutor jsExecuter = (JavascriptExecutor) driver;
 
-        WebElement aramaKutusu = (WebElement) jsExecutrer.executeScript("return document.querySelector(\"body > book-app\")." +
+        WebElement aramaKutusu = (WebElement) jsExecuter.executeScript("return document." +
+                "querySelector(\"body > book-app\")." +
                 "shadowRoot.querySelector(\"#input\")");
 
         aramaKutusu.sendKeys("Basitmis degil mi?");
