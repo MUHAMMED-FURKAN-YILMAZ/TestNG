@@ -13,9 +13,9 @@ public class Test8_Homework1 extends TestBase {
 
         Thread.sleep(3000);
 
-        JavascriptExecutor jsExecutrer = (JavascriptExecutor) driver;
+        JavascriptExecutor jsExecuter = (JavascriptExecutor) driver;
 
-        WebElement shopNowButton = (WebElement) jsExecutrer.executeScript(
+        WebElement shopNowButton = (WebElement) jsExecuter.executeScript(
                 "return document.querySelector(\"body > shop-app\")." +
                         "shadowRoot.querySelector(\"iron-pages > shop-home\")." +
                         "shadowRoot.querySelector(\"div:nth-child(2) > shop-button > a\")");
